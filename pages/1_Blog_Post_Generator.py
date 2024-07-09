@@ -9,7 +9,7 @@ from utils.completion import paraphrase_req
 from constants import client
 
 st.set_page_config(
-    page_title="Blog Post Generator",
+    page_title="اعمل مقال",
 )
 
 
@@ -245,8 +245,8 @@ if __name__ == '__main__':
     if 'generated_sections_data' not in st.session_state:
         st.session_state['generated_sections_data'] = {}
 
-    st.title("Blog Post Generator")
-    st.markdown("Using only a title, you can instantly generate an entire article with the click of a button! Simply select your topic and this tool will create an engaging article from beginning to end.")
+    st.title("اعمل مقال")
+    st.markdown("اكتب عنوان بتفكر فيه للمقال، وخلي نور يقترحلك عناصر المقال، ولو مش عاجبك النتيجة، جرب تاني!")
     st.markdown("#### Blog Title")
     title = st.text_input(label="Write the title of your article here:", placeholder="",
                           value="5 Strategies to overcome writer's block").strip()

@@ -8,10 +8,11 @@ def apply_studio_style():
 
             html, body, [class*="css"]  {
             font-family: 'Open Sans', sans-serif;
+            unicode-bidi: bidi-override;
+            text-align: right;
 			}
+
         </style>
     """,
         unsafe_allow_html=True,
     )
-
-    st.image("./assets/studio_logo.png")
