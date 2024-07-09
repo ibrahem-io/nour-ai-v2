@@ -246,24 +246,24 @@ if __name__ == '__main__':
         st.session_state['generated_sections_data'] = {}
 
     st.title("اعمل مقال")
-    st.markdown("اكتب عنوان بتفكر فيه للمقال، وخلي نور يقترحلك عناصر المقال، ولو مش عاجبك النتيجة، جرب تاني!")
-    st.markdown("#### Blog Title")
-    title = st.text_input(label="Write the title of your article here:", placeholder="",
-                          value="5 Strategies to overcome writer's block").strip()
-    st.markdown("#### Blog Outline")
-    st.text("Click the button to generate the blog outline")
-    st.button(label="Generate Outline", on_click=build_generate_outline(title))
+    st.markdown("اكتب عنوان بتفكر فيه للمقال، وخلي نور يقترحلك عناصر المقال، ولو مش عاجبك النتيجة، جرب تاني")
+    st.markdown("#### فكرة المقال")
+    title = st.text_input(label="حاول تعبر عن الفكرة الأساسية في المقال، وحاول تختصرها كعنوان للمقال:", placeholder="",
+                          value="العلاقة بين الحرب العالمية الثانية والرأسمالية").strip()
+    st.markdown("#### عناصر المقال")
+    st.text("اضغط هنا عشان نور يفكرلك في عناصر مبدأية للمقال بتاعك")
+    st.button(label="اقترح عناصر مقال", on_click=build_generate_outline(title))
 
     sections = []
     if st.session_state['show_outline']:
         text_area_outline = st.text_area(label=" ", height=250, value=st.session_state["outline"],
                                          on_change=on_outline_change)
         sections = text_area_outline.split("\n")
-        st.text("Unsatisfied with the generated outline? Click the 'Generate Outline' button again to re-generate it, or edit it inline.")
+        st.text("لو مش عاجبك الاقتراحات، دوس تاني، أو عدل عليها من خلال كتابة العناصر الخاصة بيك")
 
-        st.markdown("#### Blog Sections")
-        st.text("Click the button to effortlessly generate an outline for your blog post:")
-        st.button(label="Generate Sections", on_click=build_event_loop(title, sections, num_results))
+        st.markdown("#### محتوى المقال")
+        st.text("لو عاجبك العناصر المقترحة، دوس هنا وخلي نور يكتبلك المحتوى")
+        st.button(label="اعمل محتوى المقال", on_click=build_event_loop(title, sections, num_results))
 
     if st.session_state['show_sections']:
         st.markdown(f"**{title}**")

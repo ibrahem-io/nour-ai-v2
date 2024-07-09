@@ -4,10 +4,9 @@ def apply_studio_style():
     st.markdown(
         """
         <style>
-           @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
             html, body, [class*="css"]  {
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Noto Sans Arabic", sans-serif;
             unicode-bidi: bidi-override;
             text-align: right;
 			}
@@ -16,3 +15,5 @@ def apply_studio_style():
     """,
         unsafe_allow_html=True,
     )
+
+    st.image("./assets/studio_logo.png")

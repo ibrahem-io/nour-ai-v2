@@ -7,5 +7,5 @@ if __name__ == '__main__':
         page_title="Nour AI"
     )
     apply_studio_style()
-    st.title("Nour AI: Social Media Manager")
-    st.markdown("Nour for social media management offers range of tools to assist you with your brand content craetion on social media" )
+    st.title("إدارة محتوى السوشيال ميديا")
+    st.markdown("نور هيساعدك تفكر وتعمل محتوى خاص بصفحتك على سوشيال ميديا" )
